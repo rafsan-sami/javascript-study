@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event study</title>
+</head>
+<body>
+    <h1>Exploring Event</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam accusantium dolor ex nisi consequuntur sequi nam explicabo ipsam nemo eum! Omnis consectetur quos doloribus asperiores commodi beatae molestias aperiam voluptatum.</p>
+    <button onclick="clickHanled()">Click Me</button>
+    <button id="secend">Click me-1</button>
+    <button id="third">Click me-2</button>
+    <button id="lastPerson">Click me-3</button>
+
+
+
+    <script>
+
+            function clickHanled(){
+            console.log('someone click me at', Date());
+        }
+
+        const btn = document.getElementById('secend');
+        btn.onclick = function(){
+            console.log('secend person click');
+        }
+
+        function colorChange(){
+            document.body.style.backgroundColor = 'green';
+        }
+                                                                        // color change used js
+        const colorButton = document.getElementById('third');
+        colorButton.onclick = colorChange;
+
+        document.getElementById('lastPerson').addEventListener('click', function(){
+            document.body.style.color = 'tomato';
+        })
+
+    </script>
+
+</body>
+</html>

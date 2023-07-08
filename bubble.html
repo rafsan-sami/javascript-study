@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <div id="container">
+        <ul id="myList">
+            <h1>List item</h1>
+
+            <li id="first" class="item">Lorem ipsum dolor sit.</li>
+            <li class="item">Lorem ipsum dolor sit amet..</li>
+            <li class="item">Lorem ipsum dolor sit.</li>
+            <li class="item">Lorem, ipsum dolor.</li>
+            <li class="item">Lorem ipsum dolor sit amet.</li>
+        </ul>
+        <button id="newAdd">Add New Item</button>
+    </div>
+
+
+    
+
+
+    <script>
+
+
+        // document.getElementById('first').addEventListener('click', function (enent) {
+        //     console.log('you click me ');
+        //     event.stopPropagation();
+        // })
+        
+        // document.getElementById('myList').addEventListener('click', function (enent) {
+        //     console.log('list click ');
+
+        // })
+
+        // document.getElementById('container').addEventListener('click', function (enent) {
+        //     console.log('container click');
+        // })
+
+
+        var liItems = document.getElementsByClassName('item');
+        for (let id = 0; id < liItems.length; id++) {
+            const element = liItems[id];
+            element.addEventListener('click', function(event) {
+                event.target.parentNode.removeChild(event.target);
+            })
+        }
+
+        document.getElementById('newAdd').addEventListener('click', function(){
+            var itemParent = document.getElementById('myList');
+            var newItem = document.createElement('li');
+            newItem.innerText = 'Brand new item';
+            itemParent.appendChild(newItem);
+        })
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+h1{
+    background-color: black;
+    color: aliceblue;
+    align-items: center;
+    text-align: center;
+}
+
+section{
+    border: 5px solid greenyellow;
+    padding: 40px;
+    margin: 50px;
+}
